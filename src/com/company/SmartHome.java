@@ -62,4 +62,30 @@ public class SmartHome {
         return values;
     }
 
+    void addDevice(SmartDevice device) {
+
+    }
+
+    void setAllInRoom(int room, boolean switchedOn) {
+        for (SmartDevice device : devices) {
+            if (String.valueOf(device.getLocation()).matches(room + ".(.*)")) {
+                if (switchedOn) {
+                    device.switchOn();
+                } else {
+                    device.switchOff();
+                }
+            }
+        }
+    }
+
+    void shutdown(){
+        for (SmartDevice device : devices) {
+            device.switchOff();
+        }
+    }
+
+    void insertDevice(){
+
+    }
+
 }

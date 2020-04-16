@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Locale;
+
 public class SmartHome {
 
     public SmartDevice[] devices;
@@ -16,13 +18,17 @@ public class SmartHome {
     }
 
     public void insertDevice(SmartDevice device) {
-        if(index >= devices.length) {return;}
+        if (index >= devices.length) {
+            addDevice(device);
+        }
         devices[index] = device;
         index++;
     }
 
     public void insertDevice(String name, double location, boolean switchedOn) {
-        if(index >= devices.length) {return;}
+        if (index >= devices.length) {
+            addDevice(new SmartDevice(name, location, switchedOn));
+        }
         SmartDevice obj = new SmartDevice(name, location, switchedOn);
         devices[index] = obj;
         index++;
@@ -42,7 +48,10 @@ public class SmartHome {
     }
 
     void toggle(double location) {
-        if (getDevice(location).isSwitchedOn()){
+        if (getDevice(location) == null) {
+            return;
+        }
+        if (getDevice(location).isSwitchedOn()) {
             getDevice(location).switchOff();
         } else {
             getDevice(location).switchOn();
@@ -54,7 +63,7 @@ public class SmartHome {
         String values = "";
         for (int i = 0; i < devices.length; i++) {
             values += "----------\n";
-            values += "-DEVICE " + (i + 1) + "-" +"\n";
+            values += "-DEVICE " + (i + 1) + "-" + "\n";
             values += "----------\n";
             values += devices[i].toString();
         }
@@ -78,13 +87,13 @@ public class SmartHome {
         }
     }
 
-    void shutdown(){
+    void shutdown() {
         for (SmartDevice device : devices) {
             device.switchOff();
         }
     }
 
-    void insertDevice(){
+    void insertDevice() {
 
     }
 

@@ -24,6 +24,24 @@ public class Step3 {
         /* Given the array is now fully populated, create a new SmartDevice and attempt to add it to the SmartHome. This
         should invoke the addDevice() method and the SmartDevice object should be added, resulting in an increase in
         the size of the array in the SmartHome object. */
+        SmartDevice device = new SmartDevice("toaster", 12.2, true);
+        home.addDevice(device);
 
+        /* Verify that the additional the object is added and the array is increased using the SmartHome object’s
+        toString() method. */
+        System.out.println(home.toString());
+
+        /* Run setAllInRoom() method for one of the existing rooms to change all the switchedOn values for the
+        SmartDevices in that room. */
+        home.setAllInRoom(1, true);
+
+        // Verify the changes made using the SmartHome object’s toString() method.
+        System.out.println(home.toString());
+
+        // Run shutdown().
+        home.shutdown();
+
+        // Verify the changes made using the SmartHome object’s toString() method.
+        System.out.println(home.toString());
     }
 }

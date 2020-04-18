@@ -72,7 +72,10 @@ public class SmartHome {
     }
 
     void addDevice(SmartDevice device) {
-
+        SmartDevice[] extraDevice = new SmartDevice[devices.length + 1];
+        System.arraycopy(devices, 0, extraDevice, 0, devices.length);
+        devices = extraDevice;
+        insertDevice(device);
     }
 
     void setAllInRoom(int room, boolean switchedOn) {
@@ -91,10 +94,6 @@ public class SmartHome {
         for (SmartDevice device : devices) {
             device.switchOff();
         }
-    }
-
-    void insertDevice() {
-
     }
 
 }

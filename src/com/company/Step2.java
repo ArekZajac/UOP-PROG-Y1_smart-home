@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Step2 {
     public static void main(String[] args) {
 
+        System.out.println("||| TEST 01");
         /* Using console input, ask the user to specify the number of smart devices (size) to be held in the SmartHome
         object. */
         System.out.println("|| Enter the number of smart devices:");
@@ -30,6 +31,7 @@ public class Step2 {
         // Verify that the SmartHome is correctly populated using the SmartHome object  toString() method.
         System.out.println(home.toString());
 
+        System.out.println("||| TEST 02");
         /* Using console input, ask the user to specify the number of items to be held in an array of SmartDevices.
         Create the array in main(). Populate each item in the array using a loop and user input for each new SmartDevice
         object. */
@@ -53,6 +55,7 @@ public class Step2 {
         // Verify that the SmartHome object is correctly populated using the SmartHome object toString() method.
         System.out.println(home2.toString());
 
+        System.out.println("||| TEST 03");
         /* Ask the user for an index, and using the getDevice() method, return the specific SmartDevice at that index to
         the main(). */
         System.out.println("|| Enter the number of the device you want to toggle (1-" + home.devices.length + "):");
@@ -66,6 +69,7 @@ public class Step2 {
         // Verify the values are updated using the SmartHome object’s toString() method.
         System.out.println(home.toString());
 
+        System.out.println("||| TEST 04");
         /* Ask the user for a location and using the getDevice() method, return the specific SmartDevice at that
         location to the main(). */
         System.out.println("|| Enter the location of the device you want to toggle:");

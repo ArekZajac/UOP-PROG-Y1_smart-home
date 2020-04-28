@@ -16,12 +16,14 @@ public class Step1 {
     }
 
     public static void main(String[] args) {
+        System.out.println("||| TEST 01");
         // Create a SmartDevice object with suitable parameter values.
         SmartDevice device = new SmartDevice("Lamp", 6.3, false);
 
         // Use the toString() method to display the object’s.
         System.out.println(device.toString());
 
+        System.out.println("||| TEST 02");
         /* Using console input, allow the user to specify the number of Smart Devices to store in an array. Create an
         array with the given size in main(). Populate each element of the array using a loop and user input for each
         value. Test that the array is populated correctly by using a loop combined with the toString() method to display
@@ -43,6 +45,7 @@ public class Step1 {
 
         printAllDevices(devices);
 
+        System.out.println("||| TEST 03");
         // Allow the user to select an item (SmartDevice) from the array by entering an index value.
         System.out.println("|| Enter the number of the device you want to toggle (1-" + devices.length + ")");
         int selectIndex = new Scanner(System.in).nextInt();

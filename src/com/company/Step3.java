@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Step3 {
     public static void main(String[] args){
 
+        System.out.println("||| TEST 01");
         // Create a SmartHome object and fully populate it.
         System.out.println("|| Enter the number of smart devices:");
         int deviceCount = new Scanner(System.in).nextInt();
@@ -31,6 +32,7 @@ public class Step3 {
         toString() method. */
         System.out.println(home.toString());
 
+        System.out.println("||| TEST 02");
         /* Run setAllInRoom() method for one of the existing rooms to change all the switchedOn values for the
         SmartDevices in that room. */
         home.setAllInRoom(1, true);
@@ -38,6 +40,7 @@ public class Step3 {
         // Verify the changes made using the SmartHome object’s toString() method.
         System.out.println(home.toString());
 
+        System.out.println("||| TEST 03");
         // Run shutdown().
         home.shutdown();
 

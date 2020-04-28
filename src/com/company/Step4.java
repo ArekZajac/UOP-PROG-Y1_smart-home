@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Step4 {
     public static void main(String[] args) {
 
+        System.out.println("||| TEST 01");
         /* Using console input, allow the user to specify the number of smart devices (size) to be held in a SmartHome
         object. */
         System.out.println("|| Enter the number of smart devices:");
@@ -38,6 +39,7 @@ public class Step4 {
         // Verify that the SmartHome is correctly populated using the SmartHome object  toString() method.
         System.out.println(home.toString());
 
+        System.out.println("||| TEST 02");
         /* Using console input, ask the user to specify the number of items to be held in an array of SmartDevices.
         Create the array in main(). Populate each item in the array using a loop and user input for each value with a
         mixture of SmartDevice and SmartFridge objects. */
@@ -68,12 +70,14 @@ public class Step4 {
         // Verify that the SmartHome object is correctly populated using the SmartHome object toString() method.
         System.out.println(home2.toString());
 
+        System.out.println("||| TEST 03");
         // Using the SmartHome shutdown() method, attempt to shut all devices down.
         home.shutdown();
 
         // Verify that the SmartFridge(s) remain(s) switched on using the SmartHome object’s toString() method.
         System.out.println(home.toString());
 
+        System.out.println("||| TEST 04");
         /* For a selected fridge (use an appropriate index and the getDevice() method), increment the temperature.
         Verify that the current temperature has been updated using the SmartHome object’s toString() method. */
         SmartFridge fridge = (SmartFridge) home.getDevice(0);

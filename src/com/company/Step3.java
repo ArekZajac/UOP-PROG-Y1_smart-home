@@ -7,15 +7,15 @@ public class Step3 {
 
         System.out.println("||| TEST 01");
         // Create a SmartHome object and fully populate it.
-        System.out.println("|| Enter the number of smart devices:");
+        System.out.println("Enter the number of smart devices:");
         int deviceCount = new Scanner(System.in).nextInt();
         SmartHome home = new SmartHome(deviceCount);
         for (int i = 0; i < deviceCount; i++) {
-            System.out.println("|| Enter name of device " + (i + 1) + ":");
+            System.out.println("Enter name of device " + (i + 1) + ":");
             String currentName = new Scanner(System.in).nextLine();
-            System.out.println("|| Enter location of device " + (i + 1) + " (room.socket):");
+            System.out.println("Enter location of device " + (i + 1) + " (room.socket):");
             double currentLocation = new Scanner(System.in).nextDouble();
-            System.out.println("|| Is device " + (i + 1) + " On (true/false)?");
+            System.out.println("Is device " + (i + 1) + " On (true/false)?");
             boolean currentIsOn = new Scanner(System.in).nextBoolean();
             SmartDevice dev = new SmartDevice(currentName, currentLocation, currentIsOn);
             home.insertDevice(dev);

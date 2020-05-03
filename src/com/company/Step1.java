@@ -28,7 +28,7 @@ public class Step1 {
         array with the given size in main(). Populate each element of the array using a loop and user input for each
         value. Test that the array is populated correctly by using a loop combined with the toString() method to display
         the details of all the SmartDevices. */
-        System.out.println("|| Enter number of smart devices:");
+        System.out.println("Enter number of smart devices:");
         int deviceCount = new Scanner(System.in).nextInt();
         SmartDevice[] devices = new SmartDevice[deviceCount];
 
@@ -47,8 +47,8 @@ public class Step1 {
 
         System.out.println("||| TEST 03");
         // Allow the user to select an item (SmartDevice) from the array by entering an index value.
-        System.out.println("|| Enter the number of the device you want to toggle (1-" + devices.length + ")");
-        int selectIndex = new Scanner(System.in).nextInt();
+        System.out.println("Enter the number of the device you want to toggle (1-" + devices.length + ")");
+        int selectIndex = new Scanner(System.in).nextInt() - 1;
 
         /* Execute a switchOn()() or switchOff() operation on the selected SmartDevice to change the switchedOn value
         (from true to false, or from false to true). */

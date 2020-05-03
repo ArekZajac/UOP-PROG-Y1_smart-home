@@ -17,15 +17,15 @@ public class Step4 {
         /* Using insertDevice(), populate the SmartHome object using a loop and user input for each value with a mixture
         of SmartDevice and SmartFridge objects. */
         for (int i = 0; i < deviceCount; i++) {
-            System.out.println("|| Enter name of device " + (i + 1) + ":");
+            System.out.println("Enter name of device " + (i + 1) + ":");
             String currentName = new Scanner(System.in).nextLine();
-            System.out.println("|| Enter location of device " + (i + 1) + " (room.socket):");
+            System.out.println("Enter location of device " + (i + 1) + " (room.socket):");
             double currentLocation = new Scanner(System.in).nextDouble();
-            System.out.println("|| Is device " + (i + 1) + " On (true/false)?");
+            System.out.println("Is device " + (i + 1) + " On (true/false)?");
             boolean currentIsOn = new Scanner(System.in).nextBoolean();
             // The first device will be a fridge.
             if (i == 0) {
-                System.out.println("|| Temperature of fridge: ");
+                System.out.println("Temperature of fridge: ");
                 double currentTemp = new Scanner(System.in).nextDouble();
                 SmartFridge fridge = new SmartFridge(currentName, currentLocation, currentIsOn, currentTemp);
                 home.insertDevice(fridge);
@@ -43,19 +43,19 @@ public class Step4 {
         /* Using console input, ask the user to specify the number of items to be held in an array of SmartDevices.
         Create the array in main(). Populate each item in the array using a loop and user input for each value with a
         mixture of SmartDevice and SmartFridge objects. */
-        System.out.println("|| Enter the number of smart devices:");
+        System.out.println("Enter the number of smart devices:");
         deviceCount = new Scanner(System.in).nextInt();
         SmartDevice[] devices = new SmartDevice[deviceCount];
         for (int i = 0; i < devices.length; i++) {
-            System.out.println("|| Enter name of device " + (i + 1) + ":");
+            System.out.println("Enter name of device " + (i + 1) + ":");
             String currentName = new Scanner(System.in).nextLine();
-            System.out.println("|| Enter location of device " + (i + 1) + " (room.socket):");
+            System.out.println("Enter location of device " + (i + 1) + " (room.socket):");
             double currentLocation = new Scanner(System.in).nextDouble();
-            System.out.println("|| Is device " + (i + 1) + " On (true/false)?");
+            System.out.println("Is device " + (i + 1) + " On (true/false)?");
             boolean currentIsOn = new Scanner(System.in).nextBoolean();
             // The first device will be a fridge.
             if (i == 0) {
-                System.out.println("|| Temperature of fridge: ");
+                System.out.println("Temperature of fridge: ");
                 double currentTemp = new Scanner(System.in).nextDouble();
                 devices[i] = new SmartFridge(currentName, currentLocation, currentIsOn, currentTemp);
             } else {

@@ -49,5 +49,16 @@ public class Step5 {
         /* Using console input, obtain a valid location in the SmartHome object from the user. Use getDevice()  to
         select a smart lamp and with the returned object change the lighting mode to a different lighting mode:
         BRIGHT_MODE. */
+//        System.out.println("Select either lamp 1 or 2 to change the lighting mode to bright mode (1/2):");
+//        if (new Scanner(System.in).nextInt() == 1){
+//            SmartLamp lamp = (SmartLamp) home.getDevice(3);
+//            lamp.setLightmode(LightModes.LightMode.BRIGHT_MODE);
+//        } else {
+//            SmartLamp lamp = (SmartLamp) home.getDevice(4);
+//            lamp.setLightmode(LightModes.LightMode.BRIGHT_MODE);
+//        }
+
+        // Verify these changes to the lighting mode cannot be done using the SmartHome object toString() method.
+        System.out.println(home.toString());
     }
 }
